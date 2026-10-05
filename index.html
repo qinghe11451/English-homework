@@ -182,3 +182,32 @@
   </div>
 </section>
 <!-- 时间轴结束 -->
+<!-- 按钮和图片区域 -->
+<div style="text-align: center; margin: 30px 0;">
+
+  <button onclick="showTwoPics()" style="background-color: #000; color: #fff; padding: 12px 24px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">
+    Click to view Luo Haili's goofy pictures
+  </button>
+
+  <div style="margin-top: 20px;">
+    <!-- 两个图片分别加上了 id -->
+    < img id="goofyPic1" src="IMG_0033.jpeg" style="max-width: 100%; border-radius: 12px; display: none; margin-bottom: 15px;">
+    < img id="goofyPic2" src="IMG_0034.jpeg" style="max-width: 100%; border-radius: 12px; display: none;">
+  </div>
+
+</div>
+
+<script>
+  function showTwoPics() {
+    var img1 = document.getElementById('goofyPic1');
+    var img2 = document.getElementById('goofyPic2');
+    
+    if (img1.style.display === 'none') {
+      img1.style.display = 'block';
+      img2.style.display = 'block';
+    } else {
+      img1.style.display = 'none';
+      img2.style.display = 'none';
+    }
+  }
+</script>
