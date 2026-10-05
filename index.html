@@ -208,3 +208,22 @@
     }
   }
 </script>
+  <!-- 音频播放区域 -->
+<div style="text-align: center; margin: 30px 0;">
+  <!-- 播放按钮 -->
+  <button onclick="playMyAudio()" style="background-color: #000; color: #fff; padding: 12px 24px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">
+    🎵 点击播放音频
+  </button>
+
+  <!-- 音频文件，默认隐藏，点击按钮后才播放 -->
+  <!-- ⚠️ 注意：src="sound.mp3" 改成你上传的音频文件的准确名字（大小写必须一致） -->
+  <audio id="myAudio" src="1.mp3" style="display: none;"></audio>
+</div>
+
+<script>
+  function playMyAudio() {
+    var audio = document.getElementById('myAudio');
+    audio.currentTime = 0; // 每次点击都从头开始播放
+    audio.play();          // 执行播放
+  }
+</script>
